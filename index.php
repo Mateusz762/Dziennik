@@ -10,22 +10,62 @@
 </head>
 <body>
 <div class="container">
-    <div class="header">
-        <header>
-            <h2>Dziennik elektroniczny</h2>
-        </header>
-    </div>
-   <div class="signIn">Login:
-        <div class="fold">
-            <form action="log in.php method="post">
-                <input type="text" name="user" placecholder="user" required>
-                <input type="text" name="user" placecholder="password" required>
-                <input type="text" name="user" placecholder="checkbox" required>
-                <button>Zaloguj się</button>
-            </form>
-    
+    <div class="wrapper">
+       <div class="header">
+            <header>
+               <h2>Dziennik elektroniczny</h2>
+         </header>
+     </div>
+    <nav class="nav">
+    <form action="registretion.php method="POST">
+        <div class="nav-button">
+            <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+            <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
         </div>
-   </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </form>
+    </nav>
+// <!--Formularz rejestracyjny-->//   
+    <div class="form-box">
+    <form action="registretion.php method="POST">
+        <div class="login-container" id="login">
+            <div class="top">
+                <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
+                <header>Login</header>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Username or Email" required>
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Password" required>
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Confirm-Password" required>
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <div class="input-box">
+                <input type="email" class="input-field" placeholder="Email" required>
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Sign In" required>
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="login-check" required>
+                    <label for="login-check"> Remember Me</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Forgot password?</a></label>
+                </div>
+            </div>
+        </form>
+    </div>
+   <script src="script.js"></script>
 </div>
 </body>
 </html>
