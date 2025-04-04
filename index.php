@@ -16,55 +16,80 @@
                <h2>Dziennik elektroniczny</h2>
          </header>
      </div>
-    <nav class="nav">
-    <form action="registretion.php method="POST">
-        <div class="nav-button">
-            <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
-            <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+     <div class="nav-button">
+            <button class="btn white-btn" id="loginBtn" onclick="login()">Zaloguj się</button>
+            <button class="btn" id="registerBtn" onclick="register()">Zarejestrój się</button>
         </div>
         <div class="nav-menu-btn">
             <i class="bx bx-menu" onclick="myMenuFunction()"></i>
         </div>
-    </form>
     </nav>
-// <!--Formularz rejestracyjny-->//   
     <div class="form-box">
-    <form action="registretion.php method="POST">
-        <div class="login-container" id="login">
+    <form action="log in.php" method="POST">
             <div class="top">
-                <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
-                <header>Login</header>
+                <span>Utwórz konto? <a href="#" onclick="register()">Sign Up</a></span>
+                <header>Zaloguj się do dziennika</header>
             </div>
             <div class="input-box">
-                <input type="text" class="input-field" placeholder="Username or Email" required>
-                <i class="fa-solid fa-user"></i>
+                <input type="text" class="input-field" placeholder="Podaj login lub email" required>
+                <i class="fa-solid fa-user"></i> <i class="fa-solid fa-envelope"></i>
             </div>
             <div class="input-box">
-                <input type="password" class="input-field" placeholder="Password" required>
+                <input type="password" class="input-field" placeholder="Hasło" equired>
                 <i class="fa-solid fa-lock"></i>
             </div>
             <div class="input-box">
-                <input type="password" class="input-field" placeholder="Confirm-Password" required>
-                <i class="fa-solid fa-lock"></i>
-            </div>
-            <div class="input-box">
-                <input type="email" class="input-field" placeholder="Email" required>
-                <i class="fa-solid fa-envelope"></i>
-            </div>
-            <div class="input-box">
-                <input type="submit" class="submit" value="Sign In" required>
+                <input type="submit" class="submit" value="Zaloguj się">
             </div>
             <div class="two-col">
                 <div class="one">
-                    <input type="checkbox" id="login-check" required>
+                    <input type="checkbox" id="login-check">
                     <label for="login-check"> Remember Me</label>
                 </div>
                 <div class="two">
-                    <label><a href="#">Forgot password?</a></label>
+                    <label><a href="http://localhost/dziennik/forgotpass.php">Forgot password?</a></label>
                 </div>
             </div>
-        </form>
+        </div>
+    </form>
+        <!--Rejestracja ucznia-->
+        <div class="register-container" id="register">
+            <div class="top">
+                <span>Have an account? <a href="#" onclick="login()">Login</a></span>
+                <header>Rejestracja</header>
+            </div>
+            <div class="two-forms">
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Nazwa urzytkownika" equired>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Podaj Hasło" equired>
+                <i class="fa-solid fa-lock"></i>
+            </div> <div class="input-box">
+                <input type="text" class="input-field" placeholder="Powtórz Hasło" equired>
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Podaj maila" equired>
+                <i class="fa-solid envelop"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Utwórz konto ucznia">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="register-check">
+                    <label for="register-check"> Zapamiętaj mnie</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Terms & conditions</a></label>
+                </div>
+            </div>
+        </div>
     </div>
+</div>   
    <script src="script.js"></script>
 </div>
 </body>
